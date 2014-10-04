@@ -1,3 +1,8 @@
+<blockquote class="quote" ng-controller="QuoteCtrl as quoteCtrl">
+  <p ng-bind="quoteCtrl.quote.text"></p>
+  <footer ng-bind="quoteCtrl.quote.author"></footer>
+</blockquote>
+
 <div class="buttons" ng-controller="RSVPCtrl as RSVPCtrl">
   <div
     ng-class="{selected: RSVPCtrl.declined, deselected: !RSVPCtrl.declined}"

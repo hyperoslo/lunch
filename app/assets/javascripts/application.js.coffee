@@ -12,14 +12,12 @@
 #
 #= require jquery
 #= require jquery_ujs
+#= require underscore
 #= require turbolinks
 #= require angular
 #= require angular/config
 #= require fastclick
 #= require_tree .
-
-# Disable scrolling on mobile devices
-document.addEventListener "touchstart", (e) -> e.preventDefault()
 
 $ ->
   FastClick.attach document.body

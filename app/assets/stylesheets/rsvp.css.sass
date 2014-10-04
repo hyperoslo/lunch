@@ -5,9 +5,9 @@
 @import "mixins/responsive"
 
 .buttons
-  margin: auto
 
   +respond-to($non-mobile)
+    margin: auto
     position: absolute
     top: 0
     left: 0
@@ -15,8 +15,11 @@
     right: 0
     height: 100px
 
+  +respond-to($mobile)
+    margin: 0 auto 100px auto
+
   .button
-    float: left
+    display: inline-block
     font-size: 125px
     width: 33%
     text-align: center
@@ -26,22 +29,8 @@
     +transition(all 0.1s)
     +transform(scale(0.5))
 
-    +respond-to($non-mobile)
-      width: 33%
-
     +respond-to($mobile)
       width: 100%
-      margin-bottom: 3%
-      position: absolute
-
-      &:nth-child(1)
-        top: 5%
-
-      &:nth-child(2)
-        top: 35%
-
-      &:nth-child(3)
-        top: 65%
 
     &.deselected
 
@@ -57,9 +46,14 @@
       +transform(scale(1.0))
 
     &.plus
-      
+
       .amount
         position: relative
         top: -25px
         font-size: 60px
         font-weight: bold
+
+.quote
+  margin: 10% auto
+  width: 80%
+  text-align: center

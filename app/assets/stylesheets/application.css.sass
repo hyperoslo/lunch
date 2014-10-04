@@ -22,8 +22,35 @@ html
   -moz-user-select: none
   -ms-user-select: none
   user-select: none
+  height: 100%
 
 body
   background: $orange
+  height: 100%
   font-family: Arial
   color: #fff
+
+blockquote
+  font-family: "Georgia"
+
+  p
+    display: inline-block
+    font-size: 30px
+    font-style: italic
+
+    &:before
+      content: open-quote
+      content: "“"
+      margin-right: 10px
+
+    &:after
+      content: close-quote
+      content: "”"
+      margin-left: 5px
+
+  footer
+    display: inline-block
+    margin-left: 10px
+
+    &:before
+      content: "- "
