@@ -17,4 +17,5 @@
 #= require angular/config
 #= require_tree .
 
-document.addEventListener "touchstart", -> false
+# Disable scrolling on mobile devices
+document.addEventListener "touchstart", (e) -> e.preventDefault()
