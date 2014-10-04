@@ -27,5 +27,6 @@ angular.module("lunch")
       @plused = true
 
     @reset()
+    @accept()
     
     this
