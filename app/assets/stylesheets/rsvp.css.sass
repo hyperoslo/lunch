@@ -6,20 +6,16 @@
 
 .buttons
   margin: auto
-  position: absolute
-  top: 0
-  left: 0
-  bottom: 0
-  right: 0
 
   +respond-to($non-mobile)
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
     height: 100px
 
-  +respond-to($mobile)
-    height: 500px
-
   .button
-    position: relative
     float: left
     font-size: 125px
     width: 33%
@@ -35,7 +31,17 @@
 
     +respond-to($mobile)
       width: 100%
-      margin-bottom: 40px
+      margin-bottom: 3%
+      position: absolute
+
+      &:nth-child(1)
+        top: 5%
+
+      &:nth-child(2)
+        top: 35%
+
+      &:nth-child(3)
+        top: 65%
 
     &.deselected
 
