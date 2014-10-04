@@ -1,0 +1,26 @@
+<div class="buttons" ng-controller="RSVPCtrl as RSVPCtrl">
+  <div
+    ng-class="{selected: RSVPCtrl.declined, deselected: !RSVPCtrl.declined}"
+    ng-click="RSVPCtrl.decline()"
+    class="decline button"
+  >
+    <i class="fa fa-remove"></i>
+  </div>
+
+  <div
+    ng-class="{selected: RSVPCtrl.accepted, deselected: !RSVPCtrl.accepted}"
+    ng-click="RSVPCtrl.accept()"
+    class="accept button"
+  >
+    <i class="fa fa-check"></i>
+  </div>
+
+  <div
+    ng-class="{selected: RSVPCtrl.plused, deselected: !RSVPCtrl.plused}"
+    ng-click="RSVPCtrl.plus()"
+    class="plus button"
+  >
+    <i class="fa fa-plus"></i>
+    <span ng-bind="RSVPCtrl.pluses" class="amount">1</span>
+  </div>
+</div>

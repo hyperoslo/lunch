@@ -1,0 +1,59 @@
+// Place all the styles related to the rsvp controller here.
+// They will automatically be included in application.css.
+// You can use Sass here: http://sass-lang.com/
+
+@import "mixins/responsive"
+
+.buttons
+  margin: auto
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+
+  +respond-to($non-mobile)
+    height: 100px
+
+  +respond-to($mobile)
+    height: 500px
+
+  .button
+    position: relative
+    float: left
+    font-size: 125px
+    width: 33%
+    text-align: center
+    cursor: pointer
+    opacity: 0.5
+    +animation-timing-function(ease)
+    +transition(all 0.1s)
+    +transform(scale(0.5))
+
+    +respond-to($non-mobile)
+      width: 33%
+
+    +respond-to($mobile)
+      width: 100%
+      margin-bottom: 40px
+
+    &.deselected
+
+    &.selected
+      opacity: 1
+      +transform(scale(0.95))
+
+    &:hover
+      opacity: 1
+      +transform(scale(0.8))
+
+    &:active
+      +transform(scale(1.0))
+
+    &.plus
+      
+      .amount
+        position: relative
+        top: -25px
+        font-size: 60px
+        font-weight: bold
