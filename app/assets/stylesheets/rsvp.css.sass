@@ -34,15 +34,12 @@
 
     &.deselected
 
+      &:hover
+        opacity: 1
+        +transform(scale(0.8))
+
     &.selected
       opacity: 1
-      +transform(scale(0.95))
-
-    &:hover
-      opacity: 1
-      +transform(scale(0.8))
-
-    &:active
       +transform(scale(1.0))
 
     &.plus
